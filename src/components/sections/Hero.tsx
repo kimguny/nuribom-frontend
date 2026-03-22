@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-[#edf8e6] flex items-center justify-center px-6">
+    <section className="min-h-screen bg-[#edf7e3] flex items-center justify-center px-6">
       <div className="text-center max-w-2xl">
         <h1 className="text-3xl md:text-4xl font-bold text-[#5a9478] mb-6 leading-snug">
           누리봄 아동청소년발달연구소

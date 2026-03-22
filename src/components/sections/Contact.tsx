@@ -7,7 +7,7 @@ export default function Contact() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* 지도 자리 */}
-          <div className="bg-[#edf8e6] rounded-2xl h-64 flex items-center justify-center text-[#7aab94]">
+          <div className="bg-[#edf7e3] rounded-2xl h-64 flex items-center justify-center text-[#7aab94]">
             지도가 들어올 자리입니다
           </div>
           {/* 연락처 */}

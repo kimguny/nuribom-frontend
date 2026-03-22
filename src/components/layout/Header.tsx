@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { NAV_ITEMS } from "@/constants/nav";
 
 export default function Header() {
@@ -9,11 +10,13 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#ffffff] shadow-sm h-16">
       <div className="max-w-5xl mx-auto px-6 h-full flex items-center justify-between">
-        <a href="/" className="text-xl font-bold text-[#5a9478]">
-          누리봄
-          <span className="block text-xs font-normal text-[#7aab94]">
-            아동청소년발달연구소
-          </span>
+        <a href="/" className="relative h-12 w-32">
+          <Image
+            src="/images/logo.jpg"
+            alt="누리봄 아동청소년발달연구소"
+            fill
+            className="object-contain"
+          />
         </a>
 
         {/* 데스크탑 네비 */}
