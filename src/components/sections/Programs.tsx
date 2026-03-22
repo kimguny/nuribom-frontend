@@ -93,7 +93,7 @@ export default function Programs() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="programs" className="py-24 bg-[#f4fbf7] px-6">
+    <section id="programs" className="py-24 bg-[#e8f5ec] px-6">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl font-bold text-[#5a9478] mb-12 text-center">
           프로그램
