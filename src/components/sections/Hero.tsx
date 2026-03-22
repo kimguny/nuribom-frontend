@@ -33,15 +33,9 @@ export default function Hero() {
             누리봄 아동청소년발달연구소
           </h1>
           <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-10 drop-shadow text-left">
-            아이의 성장을 지켜보는 부모의 마음으로,<br />
-            아이와 부모 모두의 마음을 함께 돌봅니다.
+            아이의 성장을 지켜보는 부모의 마음으로<br />
+            아이의 손을 잡고, 성장의 길을 함께합니다.
           </p>
-          <a
-            href="#contact"
-            className="inline-block bg-white text-[#5a9478] font-semibold px-8 py-3 rounded-full hover:bg-[#edf7e3] transition-colors"
-          >
-            상담 문의
-          </a>
         </div>
       </div>
 
