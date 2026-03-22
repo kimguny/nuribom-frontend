@@ -7,7 +7,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#e8f5ec] shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#ffffff] shadow-sm">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="/" className="text-xl font-bold text-[#5a9478]">
           누리봄
@@ -43,7 +43,7 @@ export default function Header() {
 
       {/* 모바일 메뉴 */}
       {menuOpen && (
-        <nav className="md:hidden bg-[#e8f5ec] border-t border-[#c8e6d5] px-6 py-4 flex flex-col gap-4">
+        <nav className="md:hidden bg-[#ffffff] border-t border-[#c8e6d5] px-6 py-4 flex flex-col gap-4">
           {NAV_ITEMS.map((item) => (
             <a
               key={item.href}
