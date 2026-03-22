@@ -7,8 +7,8 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#ffffff] shadow-sm">
-      <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#ffffff] shadow-sm h-16">
+      <div className="max-w-5xl mx-auto px-6 h-full flex items-center justify-between">
         <a href="/" className="text-xl font-bold text-[#5a9478]">
           누리봄
           <span className="block text-xs font-normal text-[#7aab94]">
