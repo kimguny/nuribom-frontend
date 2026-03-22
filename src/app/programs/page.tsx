@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { ChevronRight } from "lucide-react";
 import { PROGRAMS } from "@/constants/programs";
 
 export default function ProgramsPage() {
@@ -35,18 +36,19 @@ export default function ProgramsPage() {
           <h2 className="text-xs font-bold text-[#7aab94] uppercase tracking-widest mb-4 px-3">
             치료프로그램
           </h2>
-          <ul className="flex flex-col">
+          <ul className="flex flex-col gap-1">
             {PROGRAMS.map((program, index) => (
               <li key={program.title}>
                 <button
                   onClick={() => setSelectedIndex(index)}
-                  className={`w-full text-left px-3 py-3 rounded-xl text-sm font-medium transition-colors ${
+                  className={`w-full flex items-center justify-between px-3 py-2 rounded-xl text-sm font-medium transition-colors ${
                     selectedIndex === index
                       ? "bg-[#5a9478] text-white"
                       : "text-[#2d5040] hover:bg-white hover:text-[#5a9478]"
                   }`}
                 >
-                  {program.title}
+                  <span>{program.title}</span>
+                  {selectedIndex === index && <ChevronRight size={14} />}
                 </button>
               </li>
             ))}
