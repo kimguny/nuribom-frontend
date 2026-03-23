@@ -60,7 +60,7 @@ export default function ProgramsPage() {
         </aside>
 
         {/* 콘텐츠 */}
-        <section className="flex-1 bg-white rounded-2xl p-6 md:p-10 shadow-sm min-h-[400px]">
+        <section className="flex-1 bg-white p-6 md:p-10 shadow-sm min-h-[400px]">
           <h1 className="text-2xl font-bold text-gray-900 mb-2">{selected.title}</h1>
           <p className="text-gray-400 text-sm mb-8 leading-relaxed">{selected.summary}</p>
 

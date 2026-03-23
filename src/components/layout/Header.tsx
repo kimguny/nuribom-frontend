@@ -92,12 +92,12 @@ export default function Header() {
                     {/* 드롭다운 */}
                     {hasChildren && isOpen && (
                       <div className="absolute top-full left-0 pt-1 z-50">
-                        <ul className="bg-white rounded-xl shadow-lg overflow-hidden min-w-[160px] py-1">
+                        <ul className="bg-white shadow-lg overflow-hidden min-w-[160px] py-1">
                           {item.children!.map((child) => (
                             <li key={child.href}>
                               <a
                                 href={child.href}
-                                className="block px-5 py-3 text-sm text-[#2d5040] hover:bg-[#edf7e3] hover:text-[#5a9478] transition-colors"
+                                className="block px-5 py-3 text-sm text-[#2d5040] hover:bg-gray-100 hover:text-gray-900 transition-colors"
                                 onClick={() => setOpenDropdown(null)}
                               >
                                 {child.label}
