@@ -97,7 +97,7 @@ export default function Header() {
                             <li key={child.href}>
                               <a
                                 href={child.href}
-                                className="block px-5 py-3 text-sm text-[#2d5040] hover:bg-gray-100 hover:text-gray-900 transition-colors"
+                                className="block px-5 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
                                 onClick={() => setOpenDropdown(null)}
                               >
                                 {child.label}
