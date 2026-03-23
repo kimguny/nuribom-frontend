@@ -5,7 +5,7 @@ export const NAV_ITEMS = [
     href: "#",
     children: [
       { label: "인사말", href: "#about" },
-      { label: "치료사 소개", href: "#therapists" },
+      { label: "치료사 소개", href: "/therapists" },
       { label: "센터 둘러보기", href: "#tour" },
     ],
   },
