@@ -14,7 +14,7 @@ export const NAV_ITEMS = [
     href: "#",
     children: [
       { label: "프로그램 프로세스", href: "#process" },
-      { label: "오시는길", href: "#contact" },
+      { label: "오시는길", href: "/directions" },
     ],
   },
   { label: "치료프로그램", href: "/programs" },
