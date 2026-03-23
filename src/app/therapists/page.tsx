@@ -11,12 +11,12 @@ const CATEGORY_SUBTITLES: Record<string, string> = {
 
 export default function TherapistsPage() {
   return (
-    <main className="pt-16 md:pt-32 min-h-screen bg-white">
-      {THERAPIST_CATEGORIES.map((category) => (
+    <main className="pt-16 min-h-screen bg-white">
+      {THERAPIST_CATEGORIES.map((category, index) => (
         <div key={category.label} className="mb-16">
           {/* 분야 제목 - 배경 이미지 */}
           <div
-            className="relative h-40 md:h-52 flex flex-col items-center justify-center mb-10"
+            className={`relative flex flex-col items-center justify-center mb-10 ${index === 0 ? "h-56 md:h-72 pt-16" : "h-40 md:h-52"}`}
             style={{
               backgroundImage: "url('/images/therapists-bg.jpg')",
               backgroundSize: "cover",
