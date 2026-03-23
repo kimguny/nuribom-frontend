@@ -21,6 +21,7 @@ export default function TherapistsPage() {
               backgroundImage: "url('/images/therapists-bg.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
+              backgroundAttachment: "fixed",
             }}
           >
             <div className="absolute inset-0 bg-black/45" />
