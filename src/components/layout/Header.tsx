@@ -10,6 +10,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [sidebarDropdown, setSidebarDropdown] = useState<string | null>(null);
   const pathname = usePathname();
 
   const toggleDropdown = (label: string) => {
@@ -26,7 +27,7 @@ export default function Header() {
             <div className="flex items-center">
               <button
                 onClick={() => setSidebarOpen(true)}
-                className="text-[#2d5040] hover:text-[#5a9478] transition-colors"
+                className="text-gray-900 hover:text-gray-600 transition-colors"
                 aria-label="사이드바 열기"
               >
                 <Menu size={24} />
@@ -153,27 +154,58 @@ export default function Header() {
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between px-6 py-5 border-b border-[#c8e6d5]">
-          <span className="font-bold text-[#5a9478]">메뉴</span>
+        <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100">
+          <span className="font-bold text-gray-900">메뉴</span>
           <button
             onClick={() => setSidebarOpen(false)}
-            className="text-[#7aab94] hover:text-[#5a9478] text-xl"
+            className="text-gray-400 hover:text-gray-900 text-xl"
             aria-label="사이드바 닫기"
           >
             ✕
           </button>
         </div>
         <nav className="flex flex-col py-4">
-          {NAV_ITEMS.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="px-6 py-4 text-[#2d5040] hover:bg-[#edf7e3] hover:text-[#5a9478] transition-colors"
-              onClick={() => setSidebarOpen(false)}
-            >
-              {item.label}
-            </a>
-          ))}
+          {NAV_ITEMS.map((item) => {
+            const hasChildren = "children" in item && item.children;
+            const isOpen = sidebarDropdown === item.label;
+            return (
+              <div key={item.label}>
+                {hasChildren ? (
+                  <>
+                    <button
+                      onClick={() => setSidebarDropdown((prev) => prev === item.label ? null : item.label)}
+                      className="w-full flex items-center justify-between px-6 py-4 text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
+                    >
+                      <span>{item.label}</span>
+                      <ChevronDown size={15} className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+                    </button>
+                    {isOpen && (
+                      <div className="bg-gray-50">
+                        {item.children!.map((child) => (
+                          <a
+                            key={child.href}
+                            href={child.href}
+                            className="block px-10 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors"
+                            onClick={() => { setSidebarOpen(false); setSidebarDropdown(null); }}
+                          >
+                            {child.label}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <a
+                    href={item.href}
+                    className="block px-6 py-4 text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
+                    onClick={() => setSidebarOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                )}
+              </div>
+            );
+          })}
         </nav>
       </aside>
     </>
