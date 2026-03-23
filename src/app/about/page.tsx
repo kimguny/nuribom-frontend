@@ -5,7 +5,7 @@ export default function AboutPage() {
       <div
         className="relative h-56 md:h-72 pt-16 flex flex-col items-center justify-center"
         style={{
-          backgroundImage: "url('/images/therapists-bg.jpg')",
+          backgroundImage: "url('/images/about-bg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",

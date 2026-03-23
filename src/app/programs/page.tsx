@@ -3,6 +3,15 @@
 import Image from "next/image";
 import { PROGRAMS } from "@/constants/programs";
 
+const PROGRAM_SUBTITLES: Record<string, string> = {
+  언어치료: "SPEECH THERAPY",
+  놀이치료: "PLAY THERAPY",
+  미술치료: "ART THERAPY",
+  인지학습: "COGNITIVE LEARNING",
+  "사회성 그룹치료": "SOCIAL GROUP THERAPY",
+  심리상담: "PSYCHOLOGICAL COUNSELING",
+};
+
 export default function ProgramsPage() {
   return (
     <main
@@ -16,6 +25,7 @@ export default function ProgramsPage() {
             <div className="absolute inset-0 bg-black/45" />
             <div className="relative text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white tracking-wide">{program.title}</h2>
+              <p className="text-white/70 text-xs mt-2 tracking-widest">{PROGRAM_SUBTITLES[program.title]}</p>
             </div>
           </div>
 
