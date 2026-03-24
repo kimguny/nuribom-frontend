@@ -34,8 +34,8 @@ export default function Header() {
               </button>
             </div>
 
-            {/* 가운데 - 로고 */}
-            <div className="flex justify-center">
+            {/* 가운데 - 로고 + 이름 */}
+            <div className="flex justify-center items-center gap-3">
               <a href="/">
                 <Image
                   src="/images/logo.jpg"
@@ -45,17 +45,12 @@ export default function Header() {
                   className="h-14 w-auto object-contain"
                 />
               </a>
+              <span className="text-sm font-bold hidden md:block" style={{ color: '#5a7a48' }}>
+                누리봄아동청소년발달연구소
+              </span>
             </div>
 
-            {/* 오른쪽 - 전화번호 */}
-            <div className="flex justify-end items-center">
-              <a
-                href="tel:0314549999"
-                className="text-sm font-medium text-gray-900 transition-colors no-underline" style={{ color: 'inherit' }}
-              >
-                031.454.9999
-              </a>
-            </div>
+            <div />
           </div>
         </div>
 
