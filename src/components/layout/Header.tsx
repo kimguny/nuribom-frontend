@@ -60,7 +60,7 @@ export default function Header() {
         </div>
 
         {/* 하단 초록 반투명 바 - 네비 */}
-        <div className="hidden md:block bg-[#3d7a5e]/70 backdrop-blur-sm h-16">
+        <div className="hidden md:block bg-[#6b9e5a]/70 backdrop-blur-sm h-16">
           <div className="relative h-full flex items-center px-6">
             <nav className="flex items-center gap-12 h-full mx-auto">
               {NAV_ITEMS.map((item) => {
