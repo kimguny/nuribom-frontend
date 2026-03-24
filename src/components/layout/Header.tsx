@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Search, Menu } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
 import { NAV_ITEMS } from "@/constants/nav";
 
 export default function Header() {
@@ -47,14 +47,14 @@ export default function Header() {
               </a>
             </div>
 
-            {/* 오른쪽 - 검색 버튼 (데스크탑만) */}
+            {/* 오른쪽 - 전화번호 */}
             <div className="flex justify-end items-center">
-              <button
-                className="hidden md:block text-[#2d5040] hover:text-[#5a9478] transition-colors"
-                aria-label="검색"
+              <a
+                href="tel:0314549999"
+                className="text-sm font-medium text-gray-900 transition-colors no-underline" style={{ color: 'inherit' }}
               >
-                <Search size={22} />
-              </button>
+                031.454.9999
+              </a>
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function Header() {
                   <div key={item.label} className="relative h-full flex items-center">
                     <button
                       onClick={() => hasChildren ? toggleDropdown(item.label) : undefined}
-                      className="relative h-full flex items-center gap-1 text-base text-white/90 hover:text-white transition-colors font-medium"
+                      className="relative h-full flex items-center gap-1 px-3 text-base text-white/90 hover:text-white hover:bg-white/10 transition-colors font-medium"
                     >
                       {hasChildren ? (
                         <span>{item.label}</span>

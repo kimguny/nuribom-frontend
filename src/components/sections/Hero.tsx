@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center">
+    <section className="flex flex-col items-center pt-16">
       {/* 배경 영상 히어로 */}
       <div className="relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
         <video
@@ -11,7 +11,7 @@ export default function Hero() {
           loop
           playsInline
         />
-        <div className="relative w-full max-w-5xl px-12 py-20 flex flex-col items-start">
+        <div className="relative w-full max-w-5xl px-12 pt-16 pb-20 flex flex-col items-start">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-snug drop-shadow text-left">
             누리봄 아동청소년발달연구소
           </h1>
