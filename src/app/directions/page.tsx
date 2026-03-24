@@ -5,7 +5,7 @@ export default function DirectionsPage() {
     <main className="pt-16 min-h-screen">
       {/* 상단 배너 */}
       <div
-        className="relative h-56 md:h-72 pt-16 flex flex-col items-center justify-center"
+        className="relative h-44 md:h-72 md:pt-16 flex flex-col items-center justify-center"
         style={{
           backgroundImage: "url('/images/about-bg.jpg')",
           backgroundSize: "cover",

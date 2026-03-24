@@ -21,7 +21,7 @@ export default function ProgramsPage() {
       {PROGRAMS.map((program, index) => (
         <div key={program.title}>
           {/* 프로그램 타이틀 배너 */}
-          <div className={`relative flex flex-col items-center justify-center ${index === 0 ? "h-56 md:h-72 pt-16" : "h-40 md:h-52"}`}>
+          <div className={`relative flex flex-col items-center justify-center ${index === 0 ? "h-44 md:h-72 md:pt-16" : "h-40 md:h-52"}`}>
             <div className="absolute inset-0 bg-black/45" />
             <div className="relative text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white tracking-wide">{program.title}</h2>

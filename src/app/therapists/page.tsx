@@ -16,7 +16,7 @@ export default function TherapistsPage() {
         <div key={category.label} className="mb-16">
           {/* 분야 제목 - 배경 이미지 */}
           <div
-            className={`relative flex flex-col items-center justify-center mb-10 ${index === 0 ? "h-56 md:h-72 pt-16" : "h-40 md:h-52"}`}
+            className={`relative flex flex-col items-center justify-center mb-10 ${index === 0 ? "h-44 md:h-72 md:pt-16" : "h-40 md:h-52"}`}
             style={{
               backgroundImage: "url('/images/therapists-bg.jpg')",
               backgroundSize: "cover",
