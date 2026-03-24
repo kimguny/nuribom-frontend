@@ -68,27 +68,26 @@ export default function Header() {
                 const hasChildren = "children" in item && item.children;
                 const isOpen = openDropdown === item.label;
 
+                const navClass = "relative h-full flex items-center gap-1 px-3 text-base text-white/90 hover:text-white hover:bg-white/10 transition-colors font-medium no-underline";
+
                 return (
                   <div key={item.label} className="relative h-full flex items-center">
-                    <button
-                      onClick={() => hasChildren ? toggleDropdown(item.label) : undefined}
-                      className="relative h-full flex items-center gap-1 px-3 text-base text-white/90 hover:text-white hover:bg-white/10 transition-colors font-medium"
-                    >
-                      {hasChildren ? (
+                    {hasChildren ? (
+                      <button
+                        onClick={() => toggleDropdown(item.label)}
+                        className={navClass}
+                      >
                         <span>{item.label}</span>
-                      ) : (
-                        <a href={item.href}>{item.label}</a>
-                      )}
-                      {hasChildren && (
                         <ChevronDown
                           size={15}
                           className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
                         />
-                      )}
-                      {isActive && (
-                        <span className="absolute bottom-2 left-0 right-0 h-0.5 bg-white rounded-full" />
-                      )}
-                    </button>
+                      </button>
+                    ) : (
+                      <a href={item.href} className={navClass}>
+                        <span>{item.label}</span>
+                      </a>
+                    )}
 
                     {/* 드롭다운 */}
                     {hasChildren && isOpen && (
