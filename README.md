@@ -2,7 +2,7 @@
 
 누리봄 아동청소년발달연구소 공식 웹사이트 프론트엔드 프로젝트입니다.
 
-**배포 주소:** https://nuribom-frontend-vercel.vercel.app
+**배포 주소:** https://nuribom-frontend.vercel.app
 
 ## 기술 스택
 
