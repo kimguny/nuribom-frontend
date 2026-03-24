@@ -20,5 +20,4 @@ export const NAV_ITEMS = [
   { label: "치료프로그램", href: "/programs" },
   { label: "바우처 안내", href: "/voucher" },
   { label: "검사프로그램", href: "#" },
-  { label: "상담문의", href: "#contact" },
 ];
