@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { preload } from "react-dom";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -16,6 +17,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  preload("/images/about-bg.jpg", { as: "image" });
+  preload("/images/therapists-bg.jpg", { as: "image" });
+  preload("/images/programs-bg.jpg", { as: "image" });
+
   return (
     <html lang="ko">
       <body>

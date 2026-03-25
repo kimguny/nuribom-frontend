@@ -10,6 +10,7 @@ export default function Hero() {
           muted
           loop
           playsInline
+          preload="auto"
         />
         <div className="relative w-full max-w-5xl px-12 pt-16 md:pt-32 pb-20 flex flex-col items-start">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-snug drop-shadow text-left">
