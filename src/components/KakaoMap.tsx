@@ -1,12 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-
-declare global {
-  interface Window {
-    kakao: any;
-  }
-}
+import type { KakaoPlaceResult } from "@/types/kakao";
+import "@/types/kakao";
 
 export default function KakaoMap() {
   const mapRef = useRef<HTMLDivElement>(null);
@@ -28,9 +24,9 @@ export default function KakaoMap() {
         });
 
         const ps = new window.kakao.maps.services.Places();
-        ps.keywordSearch("누리봄아동청소년발달연구소", (data: any[], status: string) => {
+        ps.keywordSearch("누리봄아동청소년발달연구소", (data: KakaoPlaceResult[], status: string) => {
           if (status === window.kakao.maps.services.Status.OK) {
-            const coords = new window.kakao.maps.LatLng(data[0].y, data[0].x);
+            const coords = new window.kakao.maps.LatLng(Number(data[0].y), Number(data[0].x));
             map.setCenter(coords);
 
             const marker = new window.kakao.maps.Marker({ map, position: coords });
