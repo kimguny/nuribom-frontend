@@ -22,9 +22,9 @@ export default function Header() {
       <header className="fixed top-0 left-0 right-0 z-50">
         {/* 상단 흰색 바 - 로고 */}
         <div className="bg-white shadow-sm h-16">
-          <div className="w-full px-6 h-full grid grid-cols-3 items-center">
+          <div className="w-full px-6 h-full flex items-center">
             {/* 왼쪽 - 사이드바 버튼 */}
-            <div className="flex items-center">
+            <div className="flex items-center flex-shrink-0">
               <button
                 onClick={() => setSidebarOpen(true)}
                 className="text-gray-900 hover:text-gray-600 transition-colors"
@@ -35,8 +35,8 @@ export default function Header() {
             </div>
 
             {/* 가운데 - 로고 + 이름 */}
-            <div className="flex justify-center items-center gap-3">
-              <a href="/">
+            <div className="flex-1 flex justify-center items-center gap-3 min-w-0">
+              <a href="/" className="flex-shrink-0">
                 <Image
                   src="/images/logo.jpg"
                   alt="누리봄 아동청소년발달연구소"
@@ -45,12 +45,12 @@ export default function Header() {
                   className="h-14 w-auto object-contain"
                 />
               </a>
-              <span className="text-sm font-bold hidden md:block" style={{ color: '#5a7a48' }}>
+              <a href="/" className="text-sm font-bold no-underline truncate" style={{ color: '#5a7a48' }}>
                 누리봄아동청소년발달연구소
-              </span>
+              </a>
             </div>
 
-            <div />
+            <div className="flex-shrink-0 w-6" />
           </div>
         </div>
 
