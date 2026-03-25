@@ -1,4 +1,6 @@
-export const PROGRAMS = [
+import type { Program } from "@/types/program";
+
+export const PROGRAMS: Program[] = [
   {
     title: "언어치료",
     summary: "선천적 또는 환경적 이유로 언어를 이해하고 표현하는 데 어려움이 있는 아동부터 성인까지를 대상으로 합니다. 조기 발견과 치료로 언어발달을 촉진합니다.",

@@ -1,18 +1,6 @@
-export type Therapist = {
-  name: string;
-  title: string;
-  specialties: string[];
-  education: string[];
-  certifications: string[];
-  career: string[];
-  current: string[];
-  extra?: string[];
-};
+import type { Therapist, TherapistCategory } from "@/types/therapist";
 
-export type TherapistCategory = {
-  label: string;
-  therapists: Therapist[];
-};
+export type { Therapist, TherapistCategory };
 
 export const THERAPIST_CATEGORIES: TherapistCategory[] = [
   {

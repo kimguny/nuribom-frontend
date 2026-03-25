@@ -1,4 +1,6 @@
-export const NAV_ITEMS = [
+import type { NavItem } from "@/types/nav";
+
+export const NAV_ITEMS: NavItem[] = [
   { label: "홈", href: "/" },
   {
     label: "누리봄소개",
