@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu } from "lucide-react";
 import { NAV_ITEMS } from "@/constants/nav";
@@ -36,7 +37,7 @@ export default function Header() {
 
             {/* 가운데 - 로고 + 이름 */}
             <div className="flex-1 flex justify-center items-center gap-3 min-w-0">
-              <a href="/" className="flex-shrink-0">
+              <Link href="/" className="flex-shrink-0">
                 <Image
                   src="/images/logo.jpg"
                   alt="누리봄 아동청소년발달연구소"
@@ -44,10 +45,10 @@ export default function Header() {
                   height={56}
                   className="h-14 w-auto object-contain"
                 />
-              </a>
-              <a href="/" className="text-sm font-bold no-underline truncate" style={{ color: '#5a7a48' }}>
+              </Link>
+              <Link href="/" className="text-sm font-bold no-underline truncate" style={{ color: '#5a7a48' }}>
                 누리봄아동청소년발달연구소
-              </a>
+              </Link>
             </div>
 
             <div className="flex-shrink-0 w-6" />
@@ -79,9 +80,9 @@ export default function Header() {
                         />
                       </button>
                     ) : (
-                      <a href={item.href} className={navClass}>
+                      <Link href={item.href} className={navClass}>
                         <span>{item.label}</span>
-                      </a>
+                      </Link>
                     )}
 
                     {/* 드롭다운 */}
@@ -90,13 +91,13 @@ export default function Header() {
                         <ul className="bg-white shadow-lg overflow-hidden min-w-[160px] py-1">
                           {item.children!.map((child) => (
                             <li key={child.href}>
-                              <a
+                              <Link
                                 href={child.href}
                                 className="block px-5 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
                                 onClick={() => setOpenDropdown(null)}
                               >
                                 {child.label}
-                              </a>
+                              </Link>
                             </li>
                           ))}
                         </ul>
@@ -176,26 +177,26 @@ export default function Header() {
                     {isOpen && (
                       <div className="bg-gray-50">
                         {item.children!.map((child) => (
-                          <a
+                          <Link
                             key={child.href}
                             href={child.href}
                             className="block px-10 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors"
                             onClick={() => { setSidebarOpen(false); setSidebarDropdown(null); }}
                           >
                             {child.label}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     )}
                   </>
                 ) : (
-                  <a
+                  <Link
                     href={item.href}
                     className="block px-6 py-4 text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
                     onClick={() => setSidebarOpen(false)}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 )}
               </div>
             );
