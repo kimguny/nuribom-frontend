@@ -8,7 +8,7 @@ export const NAV_ITEMS: NavItem[] = [
     children: [
       { label: "인사말", href: "/about" },
       { label: "치료사 소개", href: "/therapists" },
-      { label: "센터 둘러보기", href: "#tour" },
+      { label: "센터 둘러보기", href: "/tour" },
     ],
   },
   {
@@ -29,5 +29,5 @@ export const NAV_ITEMS: NavItem[] = [
       { label: "아동비전형성지원서비스", href: "/voucher/vision" },
     ],
   },
-  { label: "검사 프로그램", href: "#" },
+  { label: "검사 프로그램", href: "/assessment" },
 ];
