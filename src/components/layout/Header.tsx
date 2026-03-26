@@ -88,7 +88,7 @@ export default function Header() {
                     {/* 드롭다운 */}
                     {hasChildren && isOpen && (
                       <div className="absolute top-full left-0 pt-1 z-50">
-                        <ul className="bg-white shadow-lg overflow-hidden min-w-[160px] py-1">
+                        <ul className="bg-white shadow-lg overflow-hidden min-w-[160px] w-max py-1">
                           {item.children!.map((child) => (
                             <li key={child.href}>
                               <Link
