@@ -18,7 +18,7 @@ export default function ProgramsPage() {
       style={{ backgroundImage: "url('/images/programs/programs-bg.jpg')", backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed" }}
     >
       {PROGRAMS.map((program, index) => (
-        <div key={program.title}>
+        <div key={program.title} id={program.title} className="scroll-mt-16 md:scroll-mt-32">
           {/* 프로그램 타이틀 배너 */}
           <div className={`relative flex flex-col items-center justify-center ${index === 0 ? "h-44 md:h-72 md:pt-16" : "h-40 md:h-52"}`}>
             <div className="absolute inset-0 bg-black/45" />
