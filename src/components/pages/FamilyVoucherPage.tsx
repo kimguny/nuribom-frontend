@@ -43,7 +43,7 @@ export default function FamilyVoucherPage() {
       <div
         className="relative h-44 md:h-72 md:pt-16 flex flex-col items-center justify-center"
         style={{
-          backgroundImage: "url('/images/about-bg.jpg')",
+          backgroundImage: "url('/images/shared/about-bg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",

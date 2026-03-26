@@ -39,7 +39,7 @@ export default function Header() {
             <div className="flex-1 flex justify-center items-center gap-3 min-w-0">
               <Link href="/" className="flex-shrink-0">
                 <Image
-                  src="/images/logo.jpg"
+                  src="/images/shared/logo.jpg"
                   alt="누리봄 아동청소년발달연구소"
                   width={160}
                   height={56}

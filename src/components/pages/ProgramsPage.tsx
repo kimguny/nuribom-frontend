@@ -15,7 +15,7 @@ export default function ProgramsPage() {
   return (
     <main
       className="pt-16 min-h-screen"
-      style={{ backgroundImage: "url('/images/programs-bg.jpg')", backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed" }}
+      style={{ backgroundImage: "url('/images/programs/programs-bg.jpg')", backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed" }}
     >
       {PROGRAMS.map((program, index) => (
         <div key={program.title}>

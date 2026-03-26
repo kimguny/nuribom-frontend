@@ -23,8 +23,8 @@ export const PROGRAMS: Program[] = [
         "음성장애: 비정상적인 음성을 가진 경우, 성대관련 의학적 치료 후의 언어재활",
       ],
       images: [
-        "/images/language-therapy-room-1.jpg",
-        "/images/language-therapy-room-2.jpg",
+        "/images/programs/language-therapy-room-1.jpg",
+        "/images/programs/language-therapy-room-2.jpg",
       ],
     },
   },
@@ -46,8 +46,8 @@ export const PROGRAMS: Program[] = [
         "스트레스성 신체증상 또는 불수의적 움직임(틱)이 있는 아동",
       ],
       images: [
-        "/images/play-therapy-room-1.jpg",
-        "/images/play-therapy-room-2.jpg",
+        "/images/programs/play-therapy-room-1.jpg",
+        "/images/programs/play-therapy-room-2.jpg",
       ],
     },
   },
@@ -74,8 +74,8 @@ export const PROGRAMS: Program[] = [
         "사회 환경적으로 스트레스나 강박이 심한 성인",
       ],
       images: [
-        "/images/art-therapy-room-1.jpg",
-        "/images/art-therapy-room-2.jpg",
+        "/images/programs/art-therapy-room-1.jpg",
+        "/images/programs/art-therapy-room-2.jpg",
       ],
     },
   },
@@ -97,8 +97,8 @@ export const PROGRAMS: Program[] = [
         "공부방법 때문에 부모-자녀 사이에 갈등이 빈번한 아동",
       ],
       images: [
-        "/images/cognitive-therapy-room-1.jpg",
-        "/images/cognitive-therapy-room-2.jpg",
+        "/images/programs/cognitive-therapy-room-1.jpg",
+        "/images/programs/cognitive-therapy-room-2.jpg",
       ],
     },
   },
