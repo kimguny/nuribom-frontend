@@ -9,7 +9,6 @@ const PROGRAM_SUBTITLES: Record<string, string> = {
   미술치료: "ART THERAPY",
   인지학습: "COGNITIVE LEARNING",
   "사회성 그룹치료": "SOCIAL GROUP THERAPY",
-  심리상담: "PSYCHOLOGICAL COUNSELING",
 };
 
 export default function ProgramsPage() {

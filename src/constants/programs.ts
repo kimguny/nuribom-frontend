@@ -130,9 +130,4 @@ export const PROGRAMS: Program[] = [
       ],
     },
   },
-  {
-    title: "심리상담",
-    summary: "심리상담 프로그램 설명이 들어올 자리입니다.",
-    detail: null,
-  },
 ];
