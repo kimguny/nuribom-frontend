@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "누리봄 아동청소년발달연구소",
   description: "누리봄 아동청소년발달연구소 - 놀이치료, 심리상담, 언어치료",
   icons: {
-    icon: "/images/logo.jpg",
+    icon: "/images/shared/logo.jpg",
   },
 };
 
@@ -17,16 +17,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  preload("/images/about-bg.jpg", { as: "image" });
-  preload("/images/therapists-bg.jpg", { as: "image" });
-  preload("/images/programs-bg.jpg", { as: "image" });
+  preload("/images/shared/about-bg.jpg", { as: "image" });
+  preload("/images/therapists/therapists-bg.jpg", { as: "image" });
+  preload("/images/programs/programs-bg.jpg", { as: "image" });
 
   return (
     <html lang="ko">
       <body>
         <Header />
-        {children}
-        <Footer />
+        <div className="flex flex-col min-h-screen">
+          <div className="flex-1">{children}</div>
+          <Footer />
+        </div>
       </body>
     </html>
   );
