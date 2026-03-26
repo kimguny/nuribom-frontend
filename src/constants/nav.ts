@@ -20,6 +20,14 @@ export const NAV_ITEMS: NavItem[] = [
     ],
   },
   { label: "치료프로그램", href: "/programs" },
-  { label: "바우처 안내", href: "/voucher" },
+  {
+    label: "바우처 안내",
+    href: "#",
+    children: [
+      { label: "우리아이심리지원서비스", href: "/voucher/child" },
+      { label: "우리가족통합심리지원서비스", href: "/voucher/family" },
+      { label: "아동비전형성지원서비스", href: "/voucher/vision" },
+    ],
+  },
   { label: "검사프로그램", href: "#" },
 ];

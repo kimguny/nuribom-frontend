@@ -1,3 +1,5 @@
-import VoucherPage from "@/components/pages/VoucherPage";
+import { redirect } from "next/navigation";
 
-export default VoucherPage;
+export default function VoucherPage() {
+  redirect("/voucher/child");
+}

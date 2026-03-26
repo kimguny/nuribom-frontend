@@ -20,7 +20,7 @@ export default function AboutPage() {
 
       {/* 콘텐츠 */}
       <div className="bg-white">
-        <div className="max-w-3xl mx-auto px-8 py-16">
+        <div className="max-w-3xl mx-auto px-8 py-16 space-y-16">
           <div className="text-[#2d5040] leading-loose space-y-6">
             <p>
               안녕하세요.<br />
@@ -54,6 +54,25 @@ export default function AboutPage() {
               누리봄아동청소년발달연구소<br />
               소장 엄은영
             </p>
+          </div>
+
+          {/* 연구소 소개 */}
+          <div className="border-t border-gray-100 pt-16">
+            <p className="text-xs tracking-widest text-gray-400 mb-6">ABOUT US</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-700 leading-relaxed">
+              <div className="space-y-2">
+                <p className="font-semibold text-gray-900">위치 및 규모</p>
+                <p>경기도 군포시 당동에 위치하며 넓고 쾌적한 60평 규모의 시설을 갖추고 있습니다.</p>
+              </div>
+              <div className="space-y-2">
+                <p className="font-semibold text-gray-900">전문 인력</p>
+                <p>오랜 임상 경험과 전문적 지식을 갖춘 선생님들이 아이의 발달영역을 정확하게 진단합니다.</p>
+              </div>
+              <div className="space-y-2">
+                <p className="font-semibold text-gray-900">함께하는 치료</p>
+                <p>부모와 함께 소통하며 아동 개개인의 언어, 정서, 신체 능력을 촉진시키는 조력자가 되겠습니다.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
