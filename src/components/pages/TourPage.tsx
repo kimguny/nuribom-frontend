@@ -54,8 +54,8 @@ export default function TourPage() {
   const prev = () => setCurrent((c) => (c - 1 + COUNT) % COUNT);
   const next = () => setCurrent((c) => (c + 1) % COUNT);
 
-  // 컨테이너 너비 기준으로 카드/간격 계산
-  const cardW = Math.min(520, cw * 0.54);
+  // stage 전체 너비 기준으로 카드/간격 계산
+  const cardW = Math.min(520, cw * 0.68);
   const cardH = cardW * 0.72;
   const offset1 = cw * 0.58;
   const z1 = -400;
@@ -122,26 +122,27 @@ export default function TourPage() {
       <div className="bg-white py-12">
         <div className="max-w-5xl mx-auto px-4 md:px-8">
 
-          {/* 버튼 + 3D 무대 */}
-          <div className="flex items-center gap-3 md:gap-5">
+          {/* 3D 무대 — 버튼 절대 위치, stage 전체 너비 사용 */}
+          <div className="relative">
 
+            {/* 좌 버튼 */}
             <button
               onClick={prev}
-              className="w-9 h-9 md:w-11 md:h-11 rounded-full border border-gray-300 text-gray-500 hover:bg-gray-100 transition-colors flex items-center justify-center text-xl bg-white shadow-sm flex-shrink-0"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-9 h-9 md:w-11 md:h-11 rounded-full border border-gray-300 text-gray-500 hover:bg-gray-100 transition-colors flex items-center justify-center text-xl bg-white shadow-sm"
             >
               ‹
             </button>
 
-            {/* 3D 무대 — 너비 측정 ref */}
+            {/* 3D 무대 */}
             <div
               ref={containerRef}
-              className="relative flex-1 overflow-hidden"
+              className="relative w-full overflow-hidden"
               style={{
                 height: cardH + 32,
                 perspective: "1200px",
                 perspectiveOrigin: "50% 50%",
-                maskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
-                WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
+                maskImage: "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
+                WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
               }}
             >
               {PHOTOS.map((photo, i) => {
@@ -179,9 +180,10 @@ export default function TourPage() {
               })}
             </div>
 
+            {/* 우 버튼 */}
             <button
               onClick={next}
-              className="w-9 h-9 md:w-11 md:h-11 rounded-full border border-gray-300 text-gray-500 hover:bg-gray-100 transition-colors flex items-center justify-center text-xl bg-white shadow-sm flex-shrink-0"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-9 h-9 md:w-11 md:h-11 rounded-full border border-gray-300 text-gray-500 hover:bg-gray-100 transition-colors flex items-center justify-center text-xl bg-white shadow-sm"
             >
               ›
             </button>
