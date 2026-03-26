@@ -3,7 +3,7 @@ import type { NavItem } from "@/types/nav";
 export const NAV_ITEMS: NavItem[] = [
   { label: "홈", href: "/" },
   {
-    label: "누리봄소개",
+    label: "누리봄 소개",
     href: "#",
     children: [
       { label: "인사말", href: "/about" },
@@ -12,14 +12,14 @@ export const NAV_ITEMS: NavItem[] = [
     ],
   },
   {
-    label: "이용안내",
+    label: "이용 안내",
     href: "#",
     children: [
       { label: "프로그램 프로세스", href: "/process" },
-      { label: "오시는길", href: "/directions" },
+      { label: "오시는 길", href: "/directions" },
     ],
   },
-  { label: "치료프로그램", href: "/programs" },
+  { label: "치료 프로그램", href: "/programs" },
   {
     label: "바우처 안내",
     href: "#",
@@ -29,5 +29,5 @@ export const NAV_ITEMS: NavItem[] = [
       { label: "아동비전형성지원서비스", href: "/voucher/vision" },
     ],
   },
-  { label: "검사프로그램", href: "#" },
+  { label: "검사 프로그램", href: "#" },
 ];
