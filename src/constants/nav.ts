@@ -15,7 +15,7 @@ export const NAV_ITEMS: NavItem[] = [
     label: "이용안내",
     href: "#",
     children: [
-      { label: "프로그램 프로세스", href: "#process" },
+      { label: "프로그램 프로세스", href: "/process" },
       { label: "오시는길", href: "/directions" },
     ],
   },
