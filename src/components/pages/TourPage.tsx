@@ -180,7 +180,7 @@ export default function TourPage() {
                         fill
                         className="object-cover"
                       />
-                      <p className="absolute top-3 left-4 text-white text-xs font-medium bg-black/40 px-2 py-1">
+                      <p className="absolute bottom-0 left-0 right-0 text-center text-white text-xs font-medium bg-black/40 py-1.5">
                         {photo.label}
                       </p>
                     </div>
@@ -249,9 +249,6 @@ export default function TourPage() {
               fill
               className="object-contain"
             />
-            <p className="absolute bottom-0 left-0 right-0 text-center text-white/80 text-sm py-2">
-              {PHOTOS[lightbox].label}
-            </p>
           </div>
 
           {/* 다음 */}
