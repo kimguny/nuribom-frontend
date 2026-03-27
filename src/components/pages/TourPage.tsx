@@ -1,6 +1,7 @@
 "use client";
 
 import ShimmerImage from "@/components/ui/ShimmerImage";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const PHOTOS = [
@@ -28,7 +29,6 @@ const PHOTOS = [
 
 const COUNT = PHOTOS.length;
 
-// 현재 기준 상대 위치 (음수=왼쪽, 양수=오른쪽)
 function relPos(i: number, current: number) {
   let r = i - current;
   if (r > COUNT / 2) r -= COUNT;
@@ -38,8 +38,9 @@ function relPos(i: number, current: number) {
 
 export default function TourPage() {
   const [current, setCurrent] = useState(0);
+  const [lightbox, setLightbox] = useState<number | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [cw, setCw] = useState(900); // container width
+  const [cw, setCw] = useState(900);
 
   useEffect(() => {
     const update = () => {
@@ -51,10 +52,20 @@ export default function TourPage() {
     return () => ro.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (lightbox === null) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+      if (e.key === "ArrowLeft") setLightbox((i) => i !== null ? (i - 1 + COUNT) % COUNT : null);
+      if (e.key === "ArrowRight") setLightbox((i) => i !== null ? (i + 1) % COUNT : null);
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [lightbox]);
+
   const prev = () => setCurrent((c) => (c - 1 + COUNT) % COUNT);
   const next = () => setCurrent((c) => (c + 1) % COUNT);
 
-  // stage 전체 너비 기준으로 카드/간격 계산
   const cardW = Math.min(520, cw * 0.68);
   const cardH = cardW * 0.72;
   const offset1 = cw * 0.58;
@@ -72,7 +83,7 @@ export default function TourPage() {
         transform: `${base} translateX(0px) translateZ(0px) scale(1)`,
         opacity: 1,
         zIndex: 10,
-        pointerEvents: "none",
+        cursor: "zoom-in",
       };
     }
     if (abs === 1) {
@@ -121,10 +132,7 @@ export default function TourPage() {
       {/* 캐러셀 */}
       <div className="bg-white py-12">
         <div className="max-w-5xl mx-auto px-4 md:px-8">
-
-          {/* 3D 무대 — 버튼 절대 위치, stage 전체 너비 사용 */}
           <div className="relative">
-
             {/* 좌 버튼 */}
             <button
               onClick={prev}
@@ -160,7 +168,8 @@ export default function TourPage() {
                       ...getStyle(rel),
                     }}
                     onClick={() => {
-                      if (rel < 0) prev();
+                      if (rel === 0) setLightbox(i);
+                      else if (rel < 0) prev();
                       else if (rel > 0) next();
                     }}
                   >
@@ -204,9 +213,56 @@ export default function TourPage() {
               />
             ))}
           </div>
-
         </div>
       </div>
+
+      {/* 라이트박스 */}
+      {lightbox !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
+          onClick={() => setLightbox(null)}
+        >
+          {/* 닫기 */}
+          <button
+            className="absolute top-5 right-5 text-white/70 hover:text-white text-3xl leading-none z-10"
+            onClick={() => setLightbox(null)}
+          >
+            ✕
+          </button>
+
+          {/* 이전 */}
+          <button
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-5xl z-10 px-2"
+            onClick={(e) => { e.stopPropagation(); setLightbox((i) => i !== null ? (i - 1 + COUNT) % COUNT : null); }}
+          >
+            ‹
+          </button>
+
+          {/* 이미지 */}
+          <div
+            className="relative w-full max-w-4xl mx-16 aspect-[4/3]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={PHOTOS[lightbox].src}
+              alt={PHOTOS[lightbox].label}
+              fill
+              className="object-contain"
+            />
+            <p className="absolute bottom-0 left-0 right-0 text-center text-white/80 text-sm py-2">
+              {PHOTOS[lightbox].label}
+            </p>
+          </div>
+
+          {/* 다음 */}
+          <button
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-5xl z-10 px-2"
+            onClick={(e) => { e.stopPropagation(); setLightbox((i) => i !== null ? (i + 1) % COUNT : null); }}
+          >
+            ›
+          </button>
+        </div>
+      )}
     </main>
   );
 }
