@@ -48,6 +48,9 @@ export const PROGRAMS: Program[] = [
       images: [
         "/images/programs/play-therapy-room-1.jpg",
         "/images/programs/play-therapy-room-2.jpg",
+        "/images/programs/play-therapy-room-3.jpg",
+        "/images/programs/play-therapy-room-4.jpg",
+        "/images/programs/play-therapy-room-5.jpg",
       ],
     },
   },
