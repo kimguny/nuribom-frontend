@@ -15,7 +15,7 @@ export default function ProgramsPage() {
   return (
     <main
       className="pt-16 min-h-screen"
-      style={{ backgroundImage: "url('/images/programs/programs-bg.jpg')", backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed" }}
+      style={{ backgroundImage: "url('/images/shared/about-bg.jpg')", backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed" }}
     >
       {PROGRAMS.map((program, index) => (
         <div key={program.title} id={program.title} className="scroll-mt-16 md:scroll-mt-32">
