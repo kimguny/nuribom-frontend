@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import ShimmerImage from "@/components/ui/ShimmerImage";
 import { useEffect, useRef, useState } from "react";
 
 const PHOTOS = [
@@ -165,7 +165,7 @@ export default function TourPage() {
                     }}
                   >
                     <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl">
-                      <Image
+                      <ShimmerImage
                         src={photo.src}
                         alt={photo.label}
                         fill

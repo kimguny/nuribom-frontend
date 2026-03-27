@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { PROGRAMS } from "@/constants/programs";
+import ShimmerImage from "@/components/ui/ShimmerImage";
 
 const PROGRAM_SUBTITLES: Record<string, string> = {
   언어치료: "SPEECH THERAPY",
@@ -67,7 +67,7 @@ export default function ProgramsPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
                       {program.detail.images.map((src, i) => (
                         <div key={i} className="relative w-full aspect-[4/3] overflow-hidden">
-                          <Image
+                          <ShimmerImage
                             src={src}
                             alt={`${program.title} 치료실 사진 ${i + 1}`}
                             fill

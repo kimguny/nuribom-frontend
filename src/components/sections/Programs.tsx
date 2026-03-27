@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { PROGRAMS } from "@/constants/programs";
+import ShimmerImage from "@/components/ui/ShimmerImage";
 
 export default function Programs() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -74,7 +74,7 @@ export default function Programs() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
                         {(program.detail as { images: string[] }).images.map((src, i) => (
                           <div key={i} className="relative w-full aspect-[4/3] rounded-xl overflow-hidden">
-                            <Image
+                            <ShimmerImage
                               src={src}
                               alt={`${program.title} 치료실 사진 ${i + 1}`}
                               fill
