@@ -13,7 +13,6 @@ export default function HomeTour() {
     >
       <div className="absolute inset-0 bg-black/55" />
       <div className="relative">
-        <p className="text-xs tracking-widest text-white/60 mb-4">CENTER TOUR</p>
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
           센터 둘러보기
         </h2>

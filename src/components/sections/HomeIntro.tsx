@@ -5,7 +5,6 @@ export default function HomeIntro() {
 
         {/* 인용구 */}
         <div className="text-center mb-16">
-          <p className="text-xs tracking-widest text-gray-400 mb-4">ABOUT US</p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug break-keep">
             아이를 키우는 부모의 마음으로<br />
             아이와 부모님 곁에 함께합니다.

@@ -141,8 +141,8 @@ export default function TourPage() {
                 height: cardH + 32,
                 perspective: "1200px",
                 perspectiveOrigin: "50% 50%",
-                maskImage: "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
-                WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
+                maskImage: "linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)",
+                WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)",
               }}
             >
               {PHOTOS.map((photo, i) => {
@@ -164,16 +164,16 @@ export default function TourPage() {
                       else if (rel > 0) next();
                     }}
                   >
-                    <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl">
+                    <div className="relative w-full h-full overflow-hidden shadow-xl">
                       <ShimmerImage
                         src={photo.src}
                         alt={photo.label}
                         fill
                         className="object-cover"
                       />
-                      <div className="absolute bottom-0 left-0 right-0 bg-black/35 text-white text-sm text-center py-2">
+                      <p className="absolute top-3 left-4 text-white text-xs font-medium bg-black/40 px-2 py-1">
                         {photo.label}
-                      </div>
+                      </p>
                     </div>
                   </div>
                 );

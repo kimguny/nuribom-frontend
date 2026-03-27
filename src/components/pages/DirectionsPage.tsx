@@ -35,7 +35,7 @@ export default function DirectionsPage() {
             </div>
             <div>
               <p className="text-sm text-gray-400 mb-1">전화</p>
-              <p className="font-medium">031.454.9999 / 010.4229.9994</p>
+              <p className="font-medium">031-454-9999 / 010-4229-9994</p>
             </div>
             <div>
               <p className="text-sm text-gray-400 mb-1">운영시간</p>

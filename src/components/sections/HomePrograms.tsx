@@ -7,7 +7,6 @@ export default function HomePrograms() {
       <div className="max-w-5xl mx-auto">
 
         <div className="text-center mb-12">
-          <p className="text-xs tracking-widest text-gray-400 mb-4">PROGRAMS</p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900">치료 프로그램</h2>
         </div>
 
