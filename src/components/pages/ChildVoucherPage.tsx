@@ -76,7 +76,7 @@ export default function ChildVoucherPage() {
         <div className="max-w-4xl mx-auto px-8 py-12 space-y-12">
 
           {/* 인사 및 서비스 소개 */}
-          <div className="space-y-4 text-gray-700 leading-relaxed">
+          <div className="space-y-4 text-gray-900 leading-relaxed">
             <p>
               안녕하세요.<br />
               군포 당동에 위치한 누리봄아동청소년발달연구소입니다.
@@ -103,7 +103,7 @@ export default function ChildVoucherPage() {
           <div className="space-y-8">
             <h2 className="text-lg font-bold text-gray-900">2026년도 우리아이심리지원서비스</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-700">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-900">
               <div className="space-y-1">
                 <p className="font-semibold text-gray-900 mb-2">지원자격</p>
                 <p>소득기준 상관없이 만 18세 이하의 자녀라면 누구나 지원 가능합니다.</p>
@@ -115,7 +115,7 @@ export default function ChildVoucherPage() {
               <div className="space-y-1">
                 <p className="font-semibold text-gray-900 mb-2">서비스 제공내용</p>
                 <p>놀이치료, 언어치료, 인지치료, 미술치료</p>
-                <p className="text-gray-400">주 1회 (월 4회)</p>
+                <p className="text-gray-900">주 1회 (월 4회)</p>
               </div>
             </div>
 
@@ -124,14 +124,14 @@ export default function ChildVoucherPage() {
               <p className="font-semibold text-gray-900 mb-3 text-sm">서비스 비용</p>
               <div className="border border-gray-200 overflow-hidden">
                 <table className="w-full text-sm text-center">
-                  <thead className="bg-gray-50 text-gray-600">
+                  <thead className="bg-gray-50 text-gray-900">
                     <tr>
                       <th className="py-3 px-4 font-medium border-b border-gray-200">등급</th>
                       <th className="py-3 px-4 font-medium border-b border-gray-200">정부지원금</th>
                       <th className="py-3 px-4 font-medium border-b border-gray-200">본인부담금</th>
                     </tr>
                   </thead>
-                  <tbody className="text-gray-700">
+                  <tbody className="text-gray-900">
                     {SERVICE_COSTS.map((row, i) => (
                       <tr key={row.grade} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                         <td className="py-3 px-4">{row.grade}</td>
@@ -156,7 +156,7 @@ export default function ChildVoucherPage() {
                   <span className="flex-shrink-0 font-bold text-[#6b9e5a]">{req.number}</span>
                   <div className="space-y-1">
                     <p className="font-medium text-gray-900">{req.criteria}</p>
-                    <p className="text-gray-500">{req.documents}</p>
+                    <p className="text-gray-900">{req.documents}</p>
                   </div>
                 </div>
               ))}
@@ -170,7 +170,7 @@ export default function ChildVoucherPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-6">우선순위</h2>
             <ol className="space-y-2">
               {PRIORITIES.map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm text-gray-700">
+                <li key={i} className="flex items-start gap-3 text-sm text-gray-900">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#6b9e5a] text-white text-xs flex items-center justify-center font-bold">
                     {i + 1}
                   </span>

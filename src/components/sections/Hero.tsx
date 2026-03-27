@@ -22,8 +22,8 @@ export default function Hero() {
         />
         <div className="relative w-full max-w-5xl pl-6 pr-12 pt-16 pb-20 flex flex-col items-start z-10">
           <h1 className="text-2xl md:text-3xl font-bold text-white leading-snug drop-shadow text-left break-keep">
-            아이의 <span className="text-[#a3e4c1] font-extrabold text-3xl md:text-4xl drop-shadow-lg">성장</span>을 지켜보는 <span className="text-[#a3e4c1] font-extrabold text-3xl md:text-4xl drop-shadow-lg">부모의 마음</span>으로<br />
-            아이의 손을 잡고, 성장의 길을 <span className="text-[#a3e4c1] font-extrabold text-3xl md:text-4xl drop-shadow-lg">함께</span>합니다.
+            아이의 <span className="text-[#6ecfa3] font-extrabold text-3xl md:text-4xl drop-shadow-lg">성장</span>을 지켜보는 <span className="text-[#6ecfa3] font-extrabold text-3xl md:text-4xl drop-shadow-lg">부모의 마음</span>으로<br />
+            아이의 손을 잡고, 성장의 길을 <span className="text-[#6ecfa3] font-extrabold text-3xl md:text-4xl drop-shadow-lg">함께</span>합니다.
           </h1>
         </div>
       </div>

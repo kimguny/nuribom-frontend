@@ -75,7 +75,7 @@ export default function ProcessPage() {
                   {/* 내용 */}
                   <div className={`flex-1 ${index < STEPS.length - 1 ? "pb-10" : ""}`}>
                     <h2 className="text-base font-bold text-gray-900 mt-2.5">{step.title}</h2>
-                    <p className="text-sm text-gray-600 mt-1 leading-relaxed">{step.description}</p>
+                    <p className="text-sm text-gray-900 mt-1 leading-relaxed">{step.description}</p>
                     {step.sub && (
                       <p className="text-xs text-[#6b9e5a] mt-2 whitespace-pre-line">{step.sub}</p>
                     )}

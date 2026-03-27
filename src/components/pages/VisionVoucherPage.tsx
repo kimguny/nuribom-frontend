@@ -45,7 +45,7 @@ export default function VisionVoucherPage() {
         <div className="max-w-4xl mx-auto px-8 py-12 space-y-12">
 
           {/* 서비스 소개 */}
-          <div className="space-y-4 text-gray-700 leading-relaxed">
+          <div className="space-y-4 text-gray-900 leading-relaxed">
             <p>
               군포시 아동비전형성지원 바우처 전문기관 누리봄아동청소년발달연구소입니다.
               2024년부터 아동비전형성지원 바우처를 다시 진행하게 되었으며,
@@ -61,7 +61,7 @@ export default function VisionVoucherPage() {
           <hr className="border-gray-100" />
 
           {/* 기본 정보 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-700">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-900">
             <div className="space-y-1">
               <p className="font-semibold text-gray-900 mb-2">신청기준</p>
               <p>중위소득 140% 이하의 가정</p>
@@ -89,7 +89,7 @@ export default function VisionVoucherPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-4">우선순위</h2>
             <div className="flex flex-wrap gap-2">
               {PRIORITIES.map((item) => (
-                <span key={item} className="text-sm border border-gray-200 text-gray-600 px-3 py-1.5">
+                <span key={item} className="text-sm border border-gray-200 text-gray-900 px-3 py-1.5">
                   {item}
                 </span>
               ))}
@@ -101,7 +101,7 @@ export default function VisionVoucherPage() {
           {/* 서비스 내용 */}
           <div>
             <h2 className="text-lg font-bold text-gray-900 mb-4">서비스 제공 내용</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-700">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-900">
               <div className="space-y-1">
                 <p className="font-semibold text-gray-900 mb-2">자기이해</p>
                 <p>자신의 강점과 특성을 이해하고 긍정적 자아인식을 형성합니다.</p>
@@ -120,7 +120,7 @@ export default function VisionVoucherPage() {
               <p className="text-sm font-semibold text-gray-900 mb-3">진행 프로그램</p>
               <div className="flex flex-wrap gap-2">
                 {PROGRAMS.map((p) => (
-                  <span key={p} className="text-sm bg-gray-50 border border-gray-200 text-gray-600 px-3 py-1.5">
+                  <span key={p} className="text-sm bg-gray-50 border border-gray-200 text-gray-900 px-3 py-1.5">
                     {p}
                   </span>
                 ))}
@@ -135,7 +135,7 @@ export default function VisionVoucherPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-4">서비스 비용</h2>
             <div className="border border-gray-200 overflow-hidden">
               <table className="w-full text-sm text-center">
-                <thead className="bg-gray-50 text-gray-600">
+                <thead className="bg-gray-50 text-gray-900">
                   <tr>
                     <th className="py-3 px-4 font-medium border-b border-gray-200">등급</th>
                     <th className="py-3 px-4 font-medium border-b border-gray-200">기준</th>
@@ -143,11 +143,11 @@ export default function VisionVoucherPage() {
                     <th className="py-3 px-4 font-medium border-b border-gray-200">본인부담금</th>
                   </tr>
                 </thead>
-                <tbody className="text-gray-700">
+                <tbody className="text-gray-900">
                   {SERVICE_COSTS.map((row, i) => (
                     <tr key={row.grade} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                       <td className="py-3 px-4 font-medium">{row.grade}</td>
-                      <td className="py-3 px-4 text-gray-500">{row.desc}</td>
+                      <td className="py-3 px-4 text-gray-900">{row.desc}</td>
                       <td className="py-3 px-4">{row.government}</td>
                       <td className="py-3 px-4">{row.self}</td>
                     </tr>
@@ -157,7 +157,7 @@ export default function VisionVoucherPage() {
             </div>
           </div>
 
-          <div className="text-sm text-gray-500 text-center pb-4">
+          <div className="text-sm text-gray-900 text-center pb-4">
             관심 있으신 분들은 군포시 당동 누리봄아동청소년발달연구소로 편하게 전화 문의주세요.
           </div>
 

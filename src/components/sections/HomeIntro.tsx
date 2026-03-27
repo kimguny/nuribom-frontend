@@ -9,7 +9,7 @@ export default function HomeIntro() {
             아이를 키우는 부모의 마음으로<br />
             아이와 부모님 곁에 함께합니다.
           </h2>
-          <p className="mt-6 text-gray-500 text-sm md:text-base leading-relaxed max-w-xl mx-auto break-keep">
+          <p className="mt-6 text-gray-900 text-sm md:text-base leading-relaxed max-w-xl mx-auto break-keep">
             2016년 문을 연 이후, 발달과 정서에 어려움을 겪는 아이들 한 명 한 명의 이야기에 귀 기울이며
             가장 알맞은 치료 방향을 함께 찾아왔습니다.
           </p>
@@ -33,10 +33,10 @@ export default function HomeIntro() {
           ].map((item) => (
             <div
               key={item.label}
-              className="bg-[#f8faf8] rounded-2xl p-8 text-center"
+              className="bg-[#f8faf8] p-8 text-center"
             >
               <p className="font-semibold text-gray-900 mb-3">{item.label}</p>
-              <p className="text-sm text-gray-500 leading-relaxed break-keep">{item.desc}</p>
+              <p className="text-sm text-gray-900 leading-relaxed break-keep">{item.desc}</p>
             </div>
           ))}
         </div>

@@ -21,7 +21,7 @@ export default function HomeTour() {
         </p>
         <Link
           href="/tour"
-          className="inline-block px-8 py-3 rounded-full border border-white text-white text-sm hover:bg-white hover:text-[#2d5040] transition-colors"
+          className="inline-block px-8 py-3 rounded-none border border-white text-white text-sm hover:bg-white hover:text-black transition-colors"
         >
           둘러보기
         </Link>

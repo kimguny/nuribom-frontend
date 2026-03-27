@@ -32,7 +32,7 @@ export default function Programs() {
                     <h3 className="text-lg font-semibold text-[#2d5040]">
                       {program.title}
                     </h3>
-                    <p className="text-sm text-[#7aab94] mt-1 leading-relaxed">
+                    <p className="text-sm text-[#4a7a64] mt-1 leading-relaxed">
                       {program.summary}
                     </p>
                   </div>

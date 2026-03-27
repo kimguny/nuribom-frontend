@@ -21,7 +21,7 @@ export default function AboutPage() {
       {/* 콘텐츠 */}
       <div className="bg-white">
         <div className="max-w-3xl mx-auto px-8 py-16 space-y-16">
-          <div className="text-gray-800 leading-loose space-y-6">
+          <div className="text-gray-900 leading-loose space-y-6">
             <p>
               안녕하세요.<br />
               누리봄아동청소년발달연구소입니다.

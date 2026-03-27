@@ -15,15 +15,15 @@ export default function HomePrograms() {
             <Link
               key={program.title}
               href={`/programs#${program.title}`}
-              className="group bg-white rounded-2xl p-7 hover:shadow-md transition-shadow border border-transparent hover:border-[#c8e6d5]"
+              className="group bg-white p-7 hover:shadow-md transition-shadow border border-transparent hover:border-gray-400"
             >
-              <h3 className="font-semibold text-gray-900 text-lg mb-3 group-hover:text-gray-600 transition-colors">
+              <h3 className="font-semibold text-gray-900 text-lg mb-3 group-hover:text-gray-900 transition-colors">
                 {program.title}
               </h3>
-              <p className="text-sm text-gray-400 leading-relaxed line-clamp-3">
+              <p className="text-sm text-gray-900 leading-relaxed line-clamp-3">
                 {program.summary}
               </p>
-              <p className="mt-5 text-xs text-gray-500 font-medium">
+              <p className="mt-5 text-xs text-gray-900 font-medium">
                 자세히 보기 →
               </p>
             </Link>

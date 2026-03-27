@@ -102,17 +102,17 @@ export default function AssessmentPage() {
                 {/* 제목 */}
                 <div className="md:w-48 flex-shrink-0 mb-4 md:mb-0">
                   <h2 className="text-lg font-bold text-gray-900">{item.title}</h2>
-                  <p className="text-xs text-gray-400 mt-1 tracking-widest">{item.subtitle}</p>
+                  <p className="text-xs text-gray-900 mt-1 tracking-widest">{item.subtitle}</p>
                 </div>
 
                 {/* 내용 */}
                 <div className="flex-1 space-y-4">
-                  <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                  <p className="text-sm text-gray-900 leading-relaxed">{item.description}</p>
                   <div>
                     <p className="text-xs font-semibold text-gray-900 mb-2">이런 아동에게 필요합니다</p>
                     <ul className="space-y-1">
                       {item.targets.map((target) => (
-                        <li key={target} className="flex items-start gap-2 text-sm text-gray-500">
+                        <li key={target} className="flex items-start gap-2 text-sm text-gray-900">
                           <span className="flex-shrink-0 text-[#6b9e5a] mt-0.5">·</span>
                           {target}
                         </li>

@@ -45,7 +45,7 @@ export default function TherapistsPage() {
                   <div className="border border-gray-400 p-6 md:p-8">
                     <div className="mb-6 pb-6 border-b border-gray-100">
                       <h3 className="text-2xl md:text-3xl font-bold text-gray-900">{director.name}</h3>
-                      <p className="text-sm text-gray-400 mt-1">{director.title}</p>
+                      <p className="text-sm text-gray-900 mt-1">{director.title}</p>
                       <div className="flex flex-wrap gap-2 mt-3">
                         {director.specialties.map((s) => (
                           <span key={s} className="text-xs border border-gray-300 text-gray-500 px-2 py-0.5 rounded-full">{s}</span>
@@ -54,13 +54,13 @@ export default function TherapistsPage() {
                     </div>
 
                     {/* 3컬럼: 경력 / 학력+자격+현재 / 기타 */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-700">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-900">
                       <div>
                         <p className="font-semibold text-gray-900 mb-1.5">경력</p>
                         <ul className="space-y-1">
                           {director.career.map((c) => (
                             <li key={c} className="flex items-start gap-2">
-                              <span className="text-gray-400 flex-shrink-0 mt-0.5">·</span>{c}
+                              <span className="text-gray-600 flex-shrink-0 mt-0.5">·</span>{c}
                             </li>
                           ))}
                         </ul>
@@ -82,7 +82,7 @@ export default function TherapistsPage() {
                           <ul className="space-y-1">
                             {director.education.map((e) => (
                               <li key={e} className="flex items-start gap-2">
-                                <span className="text-gray-400 flex-shrink-0 mt-0.5">·</span>{e}
+                                <span className="text-gray-600 flex-shrink-0 mt-0.5">·</span>{e}
                               </li>
                             ))}
                           </ul>
@@ -92,7 +92,7 @@ export default function TherapistsPage() {
                           <ul className="space-y-1">
                             {director.certifications.map((c) => (
                               <li key={c} className="flex items-start gap-2">
-                                <span className="text-gray-400 flex-shrink-0 mt-0.5">·</span>{c}
+                                <span className="text-gray-600 flex-shrink-0 mt-0.5">·</span>{c}
                               </li>
                             ))}
                           </ul>
@@ -105,7 +105,7 @@ export default function TherapistsPage() {
                           <ul className="space-y-1">
                             {director.extra.map((e) => (
                               <li key={e} className="flex items-start gap-2">
-                                <span className="text-gray-400 flex-shrink-0 mt-0.5">·</span>{e}
+                                <span className="text-gray-600 flex-shrink-0 mt-0.5">·</span>{e}
                               </li>
                             ))}
                           </ul>
@@ -124,16 +124,16 @@ export default function TherapistsPage() {
                   <div className="border border-gray-400 p-5 h-full">
                     <div className="mb-4 pb-4 border-b border-gray-100">
                       <h3 className="text-lg font-bold text-gray-900">{therapist.name}</h3>
-                      <p className="text-sm text-gray-400 mt-0.5">{therapist.title}</p>
+                      <p className="text-sm text-gray-900 mt-0.5">{therapist.title}</p>
                     </div>
 
-                    <div className="space-y-4 text-sm text-gray-700">
+                    <div className="space-y-4 text-sm text-gray-900">
                       <div>
                         <p className="font-semibold text-gray-900 mb-1.5">경력</p>
                         <ul className="space-y-1">
                           {therapist.career.map((c) => (
                             <li key={c} className="flex items-start gap-2">
-                              <span className="text-gray-400 flex-shrink-0 mt-0.5">·</span>{c}
+                              <span className="text-gray-600 flex-shrink-0 mt-0.5">·</span>{c}
                             </li>
                           ))}
                         </ul>
@@ -155,7 +155,7 @@ export default function TherapistsPage() {
                         <ul className="space-y-1">
                           {therapist.education.map((e) => (
                             <li key={e} className="flex items-start gap-2">
-                              <span className="text-gray-400 flex-shrink-0 mt-0.5">·</span>{e}
+                              <span className="text-gray-600 flex-shrink-0 mt-0.5">·</span>{e}
                             </li>
                           ))}
                         </ul>
@@ -166,7 +166,7 @@ export default function TherapistsPage() {
                         <ul className="space-y-1">
                           {therapist.certifications.map((c) => (
                             <li key={c} className="flex items-start gap-2">
-                              <span className="text-gray-400 flex-shrink-0 mt-0.5">·</span>{c}
+                              <span className="text-gray-600 flex-shrink-0 mt-0.5">·</span>{c}
                             </li>
                           ))}
                         </ul>
@@ -178,7 +178,7 @@ export default function TherapistsPage() {
                           <ul className="space-y-1">
                             {therapist.extra.map((e) => (
                               <li key={e} className="flex items-start gap-2">
-                                <span className="text-gray-400 flex-shrink-0 mt-0.5">·</span>{e}
+                                <span className="text-gray-600 flex-shrink-0 mt-0.5">·</span>{e}
                               </li>
                             ))}
                           </ul>

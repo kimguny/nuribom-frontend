@@ -61,7 +61,7 @@ export default function FamilyVoucherPage() {
         <div className="max-w-4xl mx-auto px-8 py-12 space-y-12">
 
           {/* 서비스 소개 */}
-          <div className="space-y-4 text-gray-700 leading-relaxed">
+          <div className="space-y-4 text-gray-900 leading-relaxed">
             <p>
               심리적·정서적 어려움을 겪는 가정을 대상으로 심리검사와 상담을 지원하는
               국가바우처사업입니다. 가족관계 개선 및 건강한 가족기능 형성을 위한
@@ -72,7 +72,7 @@ export default function FamilyVoucherPage() {
           <hr className="border-gray-100" />
 
           {/* 지원자격 및 기간 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-700">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-900">
             <div className="space-y-1">
               <p className="font-semibold text-gray-900 mb-2">지원자격</p>
               <p>만 24세 이하 아동청소년이 포함된 가정</p>
@@ -90,7 +90,7 @@ export default function FamilyVoucherPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-6">지원 대상</h2>
             <div className="space-y-3">
               {ELIGIBILITY.map((item, i) => (
-                <div key={i} className="flex gap-3 text-sm text-gray-700">
+                <div key={i} className="flex gap-3 text-sm text-gray-900">
                   <span className="flex-shrink-0 font-bold text-[#6b9e5a]">·</span>
                   <p>{item}</p>
                 </div>
@@ -111,7 +111,7 @@ export default function FamilyVoucherPage() {
                     <th className="py-3 px-4 font-medium border-b border-gray-200 text-left">제출서류</th>
                   </tr>
                 </thead>
-                <tbody className="text-gray-700">
+                <tbody className="text-gray-900">
                   {DOCUMENTS.map((doc, i) => (
                     <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                       <td className="py-3 px-4">{doc.criteria}</td>
@@ -138,11 +138,11 @@ export default function FamilyVoucherPage() {
                     <th className="py-3 px-4 font-medium border-b border-gray-200 text-center">본인부담금</th>
                   </tr>
                 </thead>
-                <tbody className="text-gray-700">
+                <tbody className="text-gray-900">
                   {SERVICE_COSTS.map((row, i) => (
                     <tr key={row.grade} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                       <td className="py-3 px-4 font-medium">{row.grade}</td>
-                      <td className="py-3 px-4 text-gray-500">{row.desc}</td>
+                      <td className="py-3 px-4 text-gray-900">{row.desc}</td>
                       <td className="py-3 px-4 text-center">{row.government}</td>
                       <td className="py-3 px-4 text-center">{row.self}</td>
                     </tr>
@@ -152,7 +152,7 @@ export default function FamilyVoucherPage() {
             </div>
           </div>
 
-          <div className="text-sm text-gray-500 text-center pb-4">
+          <div className="text-sm text-gray-900 text-center pb-4">
             궁금하신 사항은 언제든지 누리봄아동청소년발달연구소로 문의 주세요.
           </div>
 

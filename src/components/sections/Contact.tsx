@@ -15,26 +15,26 @@ export default function Contact() {
           {/* 연락처 */}
           <div className="flex flex-col gap-5 justify-center text-gray-900">
             <div>
-              <p className="text-sm text-gray-400">전화</p>
+              <p className="text-sm text-gray-900">전화</p>
               <p className="font-medium">031-454-9999 / 010-4229-9994</p>
             </div>
             <div>
-              <p className="text-sm text-gray-400">운영시간</p>
+              <p className="text-sm text-gray-900">운영시간</p>
               <p className="font-medium">평일 10:00 ~ 20:00</p>
               <p className="font-medium">토요일 09:00 ~ 17:00</p>
             </div>
             <div>
-              <p className="text-sm text-gray-400">초기상담</p>
+              <p className="text-sm text-gray-900">초기상담</p>
               <p className="font-medium">무료</p>
             </div>
             <div>
-              <p className="text-sm text-gray-400">주차</p>
+              <p className="text-sm text-gray-900">주차</p>
               <p className="font-medium">지하 9대 / 건물 뒤 공영주차장 이용 가능</p>
             </div>
             <div>
-              <p className="text-sm text-gray-400">주소</p>
+              <p className="text-sm text-gray-900">주소</p>
               <p className="font-medium">경기도 군포시 당동 971-2번지 4층</p>
-              <p className="text-sm text-gray-400">(당동중학교 맞은편 굿모닝 한의원건물 4층)</p>
+              <p className="text-sm text-gray-900">(당동중학교 맞은편 굿모닝 한의원건물 4층)</p>
             </div>
           </div>
         </div>

@@ -31,10 +31,10 @@ export default function ProgramsPage() {
           {/* 콘텐츠 */}
           <div className="bg-white">
             <div className="max-w-4xl mx-auto px-8 py-10">
-              <p className="text-gray-400 text-sm mb-8 leading-relaxed">{program.summary}</p>
+              <p className="text-gray-900 text-sm mb-8 leading-relaxed">{program.summary}</p>
 
               {program.detail ? (
-                <div className="space-y-8 text-sm text-gray-700 leading-relaxed">
+                <div className="space-y-8 text-sm text-gray-900 leading-relaxed">
                   <p className="whitespace-pre-line text-base">{program.detail.description}</p>
 
                   <div>
@@ -42,7 +42,7 @@ export default function ProgramsPage() {
                     <ul className="space-y-2">
                       {program.detail.targets.map((target) => (
                         <li key={target} className="flex items-start gap-2">
-                          <span className="text-gray-400 mt-0.5 flex-shrink-0">·</span>
+                          <span className="text-gray-600 mt-0.5 flex-shrink-0">·</span>
                           {target}
                         </li>
                       ))}
@@ -55,7 +55,7 @@ export default function ProgramsPage() {
                       <ul className="space-y-2">
                         {program.detail.goals.map((goal) => (
                           <li key={goal} className="flex items-start gap-2">
-                            <span className="text-gray-400 mt-0.5 flex-shrink-0">·</span>
+                            <span className="text-gray-600 mt-0.5 flex-shrink-0">·</span>
                             {goal}
                           </li>
                         ))}
@@ -79,7 +79,7 @@ export default function ProgramsPage() {
                   )}
                 </div>
               ) : (
-                <p className="text-gray-400">프로그램 내용을 준비 중입니다.</p>
+                <p className="text-gray-600">프로그램 내용을 준비 중입니다.</p>
               )}
             </div>
           </div>

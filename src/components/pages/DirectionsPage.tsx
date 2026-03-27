@@ -25,20 +25,20 @@ export default function DirectionsPage() {
         <div className="max-w-4xl mx-auto px-8 py-12">
           <div className="space-y-5 text-gray-900 mb-10">
             <div>
-              <p className="text-sm text-gray-400 mb-1">주소</p>
+              <p className="text-sm text-gray-900 mb-1">주소</p>
               <p className="font-medium">경기도 군포시 당동 971-2번지 4층</p>
-              <p className="text-sm text-gray-400">(당동중학교 맞은편 굿모닝 한의원건물 4층)</p>
+              <p className="text-sm text-gray-900">(당동중학교 맞은편 굿모닝 한의원건물 4층)</p>
             </div>
             <div>
-              <p className="text-sm text-gray-400 mb-1">주차</p>
+              <p className="text-sm text-gray-900 mb-1">주차</p>
               <p className="font-medium">건물 뒤 공영주차장 이용 가능합니다.</p>
             </div>
             <div>
-              <p className="text-sm text-gray-400 mb-1">전화</p>
+              <p className="text-sm text-gray-900 mb-1">전화</p>
               <p className="font-medium">031-454-9999 / 010-4229-9994</p>
             </div>
             <div>
-              <p className="text-sm text-gray-400 mb-1">운영시간</p>
+              <p className="text-sm text-gray-900 mb-1">운영시간</p>
               <p className="font-medium">평일 10:00 ~ 20:00</p>
               <p className="font-medium">토요일 09:00 ~ 17:00</p>
             </div>
