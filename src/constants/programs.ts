@@ -78,7 +78,6 @@ export const PROGRAMS: Program[] = [
       ],
       images: [
         "/images/programs/art-therapy-room-1.jpg",
-        "/images/programs/art-therapy-room-2.jpg",
       ],
     },
   },
@@ -101,7 +100,6 @@ export const PROGRAMS: Program[] = [
       ],
       images: [
         "/images/programs/cognitive-therapy-room-1.jpg",
-        "/images/programs/cognitive-therapy-room-2.jpg",
       ],
     },
   },
