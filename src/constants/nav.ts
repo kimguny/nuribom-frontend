@@ -19,7 +19,17 @@ export const NAV_ITEMS: NavItem[] = [
       { label: "오시는 길", href: "/directions" },
     ],
   },
-  { label: "치료 프로그램", href: "/programs" },
+  {
+    label: "치료 프로그램",
+    href: "#",
+    children: [
+      { label: "언어치료", href: "/programs/speech-therapy" },
+      { label: "놀이치료", href: "/programs/play-therapy" },
+      { label: "미술치료", href: "/programs/art-therapy" },
+      { label: "인지학습", href: "/programs/cognitive" },
+      { label: "사회성 그룹치료", href: "/programs/social-group" },
+    ],
+  },
   {
     label: "바우처 안내",
     href: "#",

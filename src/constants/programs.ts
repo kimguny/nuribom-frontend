@@ -2,6 +2,7 @@ import type { Program } from "@/types/program";
 
 export const PROGRAMS: Program[] = [
   {
+    slug: "speech-therapy",
     title: "언어치료",
     summary: "선천적 또는 환경적 이유로 언어를 이해하고 표현하는 데 어려움이 있는 아동부터 성인까지를 대상으로 합니다. 조기 발견과 치료로 언어발달을 촉진합니다.",
     detail: {
@@ -29,6 +30,7 @@ export const PROGRAMS: Program[] = [
     },
   },
   {
+    slug: "play-therapy",
     title: "놀이치료",
     summary: "아이들에게 놀이는 가장 적극적인 언어입니다. 놀이를 매개로 아동의 내면을 탐색하고 스스로 갈등을 해소할 수 있도록 돕는 치료 프로그램입니다.",
     detail: {
@@ -55,6 +57,7 @@ export const PROGRAMS: Program[] = [
     },
   },
   {
+    slug: "art-therapy",
     title: "미술치료",
     summary: "미술활동을 통해 정서적 안정 및 성장을 돕는 심리치료입니다. 자신을 드러내는 것에 익숙하지 않은 분들에게 효과적인 접근 방법이 됩니다.",
     detail: {
@@ -82,6 +85,7 @@ export const PROGRAMS: Program[] = [
     },
   },
   {
+    slug: "cognitive",
     title: "인지학습",
     summary: "시각·청각적으로 받아들인 정보를 기억하고 활용하는 인지적 능력을 길러주고, 아동의 주의집중, 문제해결능력 향상, 학습동기부여를 돕는 치료 프로그램입니다.",
     detail: {
@@ -104,6 +108,7 @@ export const PROGRAMS: Program[] = [
     },
   },
   {
+    slug: "social-group",
     title: "사회성 그룹치료",
     summary: "또래와의 상호작용 속에서 의사소통, 감정조절, 관계 형성 능력을 배우고 연습하는 전문적인 소그룹 치료 프로그램입니다.",
     detail: {

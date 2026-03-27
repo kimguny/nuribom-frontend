@@ -6,6 +6,7 @@ export interface ProgramDetail {
 }
 
 export interface Program {
+  slug: string;
   title: string;
   summary: string;
   detail: ProgramDetail | null;

@@ -1,9 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Hero() {
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.playbackRate = 0.5;
+    v.currentTime = 0.1;
+    const handleTimeUpdate = () => {
+      if (v.duration && v.currentTime >= v.duration - 0.3) {
+        v.currentTime = 0.1;
+      }
+    };
+    v.addEventListener("timeupdate", handleTimeUpdate);
+    return () => v.removeEventListener("timeupdate", handleTimeUpdate);
+  }, []);
 
   return (
     <section className="flex flex-col items-center md:mt-16">
@@ -11,14 +26,15 @@ export default function Hero() {
       <div className="relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
         {!videoLoaded && <div className="absolute inset-0 shimmer z-10" />}
         <video
+          ref={videoRef}
           className="absolute inset-0 w-full h-full object-cover"
-          src="/videos/hero.mp4"
+          src="/videos/hero-new.mp4"
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
-          onCanPlay={() => setVideoLoaded(true)}
+          onPlaying={() => setVideoLoaded(true)}
         />
         <div className="relative w-full max-w-5xl pl-6 pr-12 pt-16 pb-20 flex flex-col items-start z-10">
           <h1 className="text-2xl md:text-3xl font-bold text-white leading-snug drop-shadow text-left break-keep">

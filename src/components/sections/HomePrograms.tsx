@@ -14,7 +14,7 @@ export default function HomePrograms() {
           {PROGRAMS.map((program) => (
             <Link
               key={program.title}
-              href={`/programs#${program.title}`}
+              href={`/programs/${program.slug}`}
               className="group bg-white p-7 hover:shadow-md transition-shadow border border-transparent hover:border-gray-400"
             >
               <h3 className="font-semibold text-gray-900 text-lg mb-3 group-hover:text-gray-900 transition-colors">
