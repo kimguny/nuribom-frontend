@@ -22,24 +22,20 @@ export default function HomeIntro() {
             {
               label: "위치 및 규모",
               desc: "경기도 군포시 당동에 자리하고 있습니다. 아이가 편안하게 머물 수 있도록 넓고 쾌적한 60평 규모의 공간을 마련했습니다.",
-              icon: "🏢",
             },
             {
               label: "전문 인력",
               desc: "오랜 임상 경험을 가진 석·박사 전문가들이 아이 한 명 한 명을 세심하게 살피며, 가장 알맞은 치료 방향을 안내해 드립니다.",
-              icon: "👩‍⚕️",
             },
             {
               label: "함께하는 치료",
               desc: "부모님과 함께 소통하며 아이의 언어, 정서, 신체 능력이 자연스럽게 자랄 수 있도록 언제나 곁에서 돕겠습니다.",
-              icon: "🤝",
             },
           ].map((item) => (
             <div
               key={item.label}
               className="bg-[#f8faf8] rounded-2xl p-8 text-center"
             >
-              <div className="text-3xl mb-4">{item.icon}</div>
               <p className="font-semibold text-gray-900 mb-3">{item.label}</p>
               <p className="text-sm text-gray-500 leading-relaxed break-keep">{item.desc}</p>
             </div>
