@@ -53,8 +53,30 @@ export default function TherapistsPage() {
                       </div>
                     </div>
 
+                    {/* 3컬럼: 경력 / 학력+자격+현재 / 기타 */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-700">
+                      <div>
+                        <p className="font-semibold text-gray-900 mb-1.5">경력</p>
+                        <ul className="space-y-1">
+                          {director.career.map((c) => (
+                            <li key={c} className="flex items-start gap-2">
+                              <span className="text-gray-400 flex-shrink-0 mt-0.5">·</span>{c}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
                       <div className="space-y-4">
+                        <div className="pl-3 border-l-2 border-[#5a9478]">
+                          <p className="font-semibold text-[#5a9478] mb-1.5">현재</p>
+                          <ul className="space-y-1">
+                            {director.current.map((c) => (
+                              <li key={c} className="flex items-start gap-2 font-medium text-gray-900">
+                                <span className="text-[#5a9478] flex-shrink-0 mt-0.5">·</span>{c}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                         <div>
                           <p className="font-semibold text-gray-900 mb-1.5">학력</p>
                           <ul className="space-y-1">
@@ -77,38 +99,18 @@ export default function TherapistsPage() {
                         </div>
                       </div>
 
-                      <div>
-                        <p className="font-semibold text-gray-900 mb-1.5">경력</p>
-                        <ul className="space-y-1">
-                          {director.career.map((c) => (
-                            <li key={c} className="flex items-start gap-2">
-                              <span className="text-gray-400 flex-shrink-0 mt-0.5">·</span>{c}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="space-y-4">
-                        <ul className="space-y-1">
-                          {director.current.map((c) => (
-                            <li key={c} className="flex items-start gap-2 font-medium text-gray-900">
-                              <span className="text-gray-400 flex-shrink-0 mt-0.5">·</span>{c}
-                            </li>
-                          ))}
-                        </ul>
-                        {director.extra && director.extra.length > 0 && (
-                          <div>
-                            <p className="font-semibold text-gray-900 mb-1.5">기타</p>
-                            <ul className="space-y-1">
-                              {director.extra.map((e) => (
-                                <li key={e} className="flex items-start gap-2">
-                                  <span className="text-gray-400 flex-shrink-0 mt-0.5">·</span>{e}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                      </div>
+                      {director.extra && director.extra.length > 0 && (
+                        <div>
+                          <p className="font-semibold text-gray-900 mb-1.5">기타</p>
+                          <ul className="space-y-1">
+                            {director.extra.map((e) => (
+                              <li key={e} className="flex items-start gap-2">
+                                <span className="text-gray-400 flex-shrink-0 mt-0.5">·</span>{e}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -126,6 +128,28 @@ export default function TherapistsPage() {
                     </div>
 
                     <div className="space-y-4 text-sm text-gray-700">
+                      <div>
+                        <p className="font-semibold text-gray-900 mb-1.5">경력</p>
+                        <ul className="space-y-1">
+                          {therapist.career.map((c) => (
+                            <li key={c} className="flex items-start gap-2">
+                              <span className="text-gray-400 flex-shrink-0 mt-0.5">·</span>{c}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="pl-3 border-l-2 border-[#5a9478]">
+                        <p className="font-semibold text-[#5a9478] mb-1.5">현재</p>
+                        <ul className="space-y-1">
+                          {therapist.current.map((c) => (
+                            <li key={c} className="flex items-start gap-2 font-medium text-gray-900">
+                              <span className="text-[#5a9478] flex-shrink-0 mt-0.5">·</span>{c}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
                       <div>
                         <p className="font-semibold text-gray-900 mb-1.5">학력</p>
                         <ul className="space-y-1">
@@ -147,25 +171,6 @@ export default function TherapistsPage() {
                           ))}
                         </ul>
                       </div>
-
-                      <div>
-                        <p className="font-semibold text-gray-900 mb-1.5">경력</p>
-                        <ul className="space-y-1">
-                          {therapist.career.map((c) => (
-                            <li key={c} className="flex items-start gap-2">
-                              <span className="text-gray-400 flex-shrink-0 mt-0.5">·</span>{c}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <ul className="space-y-1">
-                        {therapist.current.map((c) => (
-                          <li key={c} className="flex items-start gap-2 font-medium text-gray-900">
-                            <span className="text-gray-400 flex-shrink-0 mt-0.5">·</span>{c}
-                          </li>
-                        ))}
-                      </ul>
 
                       {therapist.extra && therapist.extra.length > 0 && (
                         <div>
